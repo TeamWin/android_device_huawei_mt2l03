@@ -23,8 +23,8 @@ TARGET_CPU_VARIANT := krait
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_KERNEL_CONFIG := mt2l03_defconfig
-TARGET_KERNEL_SOURCE := kernel/huawei/mt2l03
+#TARGET_KERNEL_CONFIG := mt2l03_defconfig
+#TARGET_KERNEL_SOURCE := kernel/huawei/mt2l03
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000 --dt device/huawei/mt2l03/prebuilt/dt.img
 # Build DT (To Do)
@@ -58,10 +58,7 @@ DEVICE_RESOLUTION := 720x1280
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_FLASH_FROM_STORAGE := true
-TW_INTERNAL_STORAGE_PATH := "/sdcard"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_INCLUDE_JB_CRYPTO := true
 RECOVERY_VARIANT := twrp
+TW_EXCLUDE_MTP := true
+TW_NO_USB_STORAGE := true

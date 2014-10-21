@@ -13,11 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(RECOVERY_VARIANT), twrp)
 ifeq ($(TARGET_DEVICE), mt2l03)
 
 LOCAL_PATH := $(call my-dir)
 include $(call first-makefiles-under, $(LOCAL_PATH))
 
-endif
 endif
