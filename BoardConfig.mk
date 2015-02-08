@@ -55,6 +55,9 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 
 # TWRP
 DEVICE_RESOLUTION := 720x1280
+RECOVERY_VARIANT := twrp
+TARGET_RECOVERY_INITRC := device/huawei/mt2l03/init.rc
+TARGET_RECOVERY_DEVICE_MODULES := chargeled
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
