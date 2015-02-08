@@ -13,6 +13,9 @@ on boot
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 300000
     setprop recovery.perf.mode 0
 
+# Services
+    start chargeled
+
 on property:recovery.perf.mode=0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "ondemand"
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "ondemand"
@@ -52,4 +55,7 @@ on property:ro.bootmode=hwcharger
     start charge
 
 service charge /sbin/charge
+    disabled
+
+service chargeled /sbin/chargeled
     disabled

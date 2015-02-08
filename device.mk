@@ -23,6 +23,10 @@ PRODUCT_PACKAGES += \
     charge \
     offmode_charging_res_images
 
+# Charging LED color status
+PRODUCT_PACKAGES += \
+    chargeled \
+
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
