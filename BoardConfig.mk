@@ -23,8 +23,8 @@ TARGET_CPU_VARIANT := krait
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
-#TARGET_KERNEL_CONFIG := mt2l03_defconfig
-#TARGET_KERNEL_SOURCE := kernel/huawei/mt2l03
+TARGET_KERNEL_CONFIG := mt2l03_defconfig
+TARGET_KERNEL_SOURCE := kernel/huawei/msm8928
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000 --dt device/huawei/mt2l03/prebuilt/dt.img
 # Build DT (To Do)
@@ -51,7 +51,8 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Vold
 BOARD_VOLD_MAX_PARTITIONS := 25
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
+#TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /lun%d/file
 
 # TWRP
 DEVICE_RESOLUTION := 720x1280
@@ -60,5 +61,5 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_INCLUDE_JB_CRYPTO := true
 RECOVERY_VARIANT := twrp
-TW_EXCLUDE_MTP := true
-TW_NO_USB_STORAGE := true
+#TW_EXCLUDE_MTP := true
+#TW_NO_USB_STORAGE := true
