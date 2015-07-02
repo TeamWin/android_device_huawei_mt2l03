@@ -1,3 +1,9 @@
+on init
+
+service mt2l03_storage /sbin/mt2l03_storage.sh
+	seclabel u:r:recovery:s0
+	oneshot
+
 on boot
     setprop usb.vendor 12d1
     setprop usb.product.adb 1038
